@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @objc func buttonTap(sender:UIButton) {
         guard let str = sender.titleLabel?.text else {return}
+        
         print("TAP: \(str)")
         WatchSession.send(message:["play":str])
         
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
             let button = UIButton()
             button.setTitle(str, for:.normal)
             button.setTitleColor(.white, for: .normal)
+            button.layer.cornerRadius = 4.0
             button.backgroundColor = .blue
             button.addTarget(self, action: #selector(buttonTap(sender:)), for:.touchUpInside)
             stack.addArrangedSubview(button)
