@@ -8,10 +8,23 @@
 
 import WatchKit
 
+func onRecieve(message:[String:Any]) {
+    print("RECIEVE: \(message)")
+    if let str = (message["play"] as? String), let ht = WKHapticType(str) {
+        print("PLAY: \(str)")
+        WKInterfaceDevice.current().play(ht)
+    }
+}
+
+func onActivate(success:Bool) {
+    print("ACTIVATE: \(success)")
+}
+
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        // setup comunication with Phone App
+        WatchSession.activate(recieveMessage:onRecieve, activationDone:onActivate)
     }
 
     func applicationDidBecomeActive() {

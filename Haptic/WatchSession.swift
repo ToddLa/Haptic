@@ -28,9 +28,12 @@ class WatchSession: NSObject, WCSessionDelegate {
     private static var shared : WatchSession?
     
     typealias RecieveInfo = ([String:Any]) -> Void
+    typealias RecieveData = (Data) -> Void
     typealias RecieveFile = (URL,[String:Any]?) -> Void
     private var updateContext : RecieveInfo?
     private var recieveInfo : RecieveInfo?
+    private var recieveMessage : RecieveInfo?
+    private var recieveData : RecieveData?
     private var recieveFile : RecieveFile?
     private var activationDone : ((Bool) -> Void)?
 
@@ -56,11 +59,15 @@ class WatchSession: NSObject, WCSessionDelegate {
     private init(updateContext : RecieveInfo? = nil,
                  recieveInfo : RecieveInfo? = nil,
                  recieveFile : RecieveFile? = nil,
+                 recieveMessage : RecieveInfo? = nil,
+                 recieveData : RecieveData? = nil,
                  activationDone: ((Bool) -> Void)? = nil) {
         super.init()
         self.updateContext = updateContext
         self.recieveInfo = recieveInfo
         self.recieveFile = recieveFile
+        self.recieveMessage = recieveMessage
+        self.recieveData = recieveData
         self.activationDone = activationDone
     }
     
@@ -70,10 +77,12 @@ class WatchSession: NSObject, WCSessionDelegate {
     static func activate(updateContext : RecieveInfo? = nil,
                          recieveInfo  : RecieveInfo? = nil,
                          recieveFile  : RecieveFile? = nil,
+                         recieveMessage : RecieveInfo? = nil,
+                         recieveData : RecieveData? = nil,
                          activationDone: ((Bool) -> Void)? = nil) {
         
         assert(shared == nil, "activate called multiple times!")
-        shared = WatchSession(updateContext: updateContext, recieveInfo: recieveInfo, recieveFile: recieveFile, activationDone:activationDone)
+        shared = WatchSession(updateContext: updateContext, recieveInfo: recieveInfo, recieveFile:recieveFile, recieveMessage:recieveMessage, recieveData:recieveData, activationDone:activationDone)
         
         session?.delegate = shared
         session?.activate()
@@ -189,7 +198,7 @@ class WatchSession: NSObject, WCSessionDelegate {
             shared?.pendingUserInfo.append(info)
             return
         }
-        print("SEND: \(info)")
+        print("SEND INFO: \(info)")
         validSession?.transferUserInfo(info)
     }
     
@@ -198,6 +207,43 @@ class WatchSession: NSObject, WCSessionDelegate {
         DispatchQueue.main.async() {
             assert(self.recieveInfo != nil)
             self.recieveInfo?(userInfo)
+        }
+    }
+    
+    // MARK: send message, only works if both watch app and iPhone are running
+    
+    static func send(message:[String:Any]) {
+        assert(shared != nil, "SEND MESSAGE: activate must be called first!")
+        if validSession?.activationState == .notActivated {
+            print("SEND MESSAGE: not activated yet!")
+            return
+        }
+        print("SEND MESSAGE: \(message)")
+        validSession?.sendMessage(message, replyHandler:nil)
+    }
+    
+    static func send(data:Data) {
+        assert(shared != nil, "SEND DATA: activate must be called first!")
+        if validSession?.activationState == .notActivated {
+            print("SEND DATA: not activated yet!")
+            return
+        }
+        print("SEND DATA: \(data)")
+        validSession?.sendMessageData(data, replyHandler:nil)
+    }
+    
+    /** Called on the delegate of the receiver. Will be called on startup if the incoming message caused the receiver to launch. */
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async() {
+            assert(self.recieveMessage != nil)
+            self.recieveMessage?(message)
+        }
+    }
+    
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        DispatchQueue.main.async() {
+            assert(self.recieveData != nil)
+            self.recieveData?(messageData)
         }
     }
     

@@ -7,14 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF36AF3520C871470014848E /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36AF3420C871470014848E /* WatchSession.swift */; };
+		EF36AF3620C871470014848E /* WatchSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36AF3420C871470014848E /* WatchSession.swift */; };
 		EF68A9B520C8195500202129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9B420C8195500202129 /* AppDelegate.swift */; };
 		EF68A9B720C8195500202129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9B620C8195500202129 /* ViewController.swift */; };
 		EF68A9BA20C8195500202129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9B820C8195500202129 /* Main.storyboard */; };
 		EF68A9BC20C8195900202129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9BB20C8195900202129 /* Assets.xcassets */; };
 		EF68A9BF20C8195900202129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9BD20C8195900202129 /* LaunchScreen.storyboard */; };
+		EF68A9CC20C819D900202129 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9CA20C819D900202129 /* Interface.storyboard */; };
+		EF68A9CE20C819DC00202129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9CD20C819DC00202129 /* Assets.xcassets */; };
+		EF68A9D520C819DC00202129 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF68A9D420C819DC00202129 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF68A9DA20C819DC00202129 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9D920C819DC00202129 /* InterfaceController.swift */; };
+		EF68A9DC20C819DC00202129 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9DB20C819DC00202129 /* ExtensionDelegate.swift */; };
+		EF68A9DE20C819DC00202129 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9DD20C819DC00202129 /* NotificationController.swift */; };
+		EF68A9E020C819DD00202129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF68A9DF20C819DD00202129 /* Assets.xcassets */; };
+		EF68A9E520C819DD00202129 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF68A9C820C819D900202129 /* Watch.app */; };
+		EF68A9F120C823CB00202129 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF68A9F020C823CB00202129 /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EF68A9D620C819DC00202129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF68A9A920C8195500202129 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF68A9D320C819DC00202129;
+			remoteInfo = "Watch Extension";
+		};
+		EF68A9E320C819DD00202129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF68A9A920C8195500202129 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF68A9C720C819D900202129;
+			remoteInfo = Watch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF68A9E920C819DD00202129 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF68A9D520C819DC00202129 /* Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF68A9ED20C819DD00202129 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EF68A9E520C819DD00202129 /* Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EF36AF3420C871470014848E /* WatchSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSession.swift; sourceTree = "<group>"; };
 		EF68A9B120C8195500202129 /* Haptic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haptic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF68A9B420C8195500202129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF68A9B620C8195500202129 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,10 +76,29 @@
 		EF68A9BB20C8195900202129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF68A9BE20C8195900202129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF68A9C020C8195900202129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF68A9C820C819D900202129 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF68A9CB20C819D900202129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EF68A9CD20C819DC00202129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF68A9CF20C819DC00202129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF68A9D420C819DC00202129 /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF68A9D920C819DC00202129 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EF68A9DB20C819DC00202129 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EF68A9DD20C819DC00202129 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EF68A9DF20C819DD00202129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF68A9E120C819DD00202129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF68A9E220C819DD00202129 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EF68A9F020C823CB00202129 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF68A9AE20C8195500202129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF68A9D120C819DC00202129 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				EF68A9B320C8195500202129 /* Haptic */,
+				EF68A9C920C819D900202129 /* Watch */,
+				EF68A9D820C819DC00202129 /* Watch Extension */,
 				EF68A9B220C8195500202129 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				EF68A9B120C8195500202129 /* Haptic.app */,
+				EF68A9C820C819D900202129 /* Watch.app */,
+				EF68A9D420C819DC00202129 /* Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +137,33 @@
 				EF68A9BB20C8195900202129 /* Assets.xcassets */,
 				EF68A9BD20C8195900202129 /* LaunchScreen.storyboard */,
 				EF68A9C020C8195900202129 /* Info.plist */,
+				EF36AF3420C871470014848E /* WatchSession.swift */,
 			);
 			path = Haptic;
+			sourceTree = "<group>";
+		};
+		EF68A9C920C819D900202129 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				EF68A9CA20C819D900202129 /* Interface.storyboard */,
+				EF68A9CD20C819DC00202129 /* Assets.xcassets */,
+				EF68A9CF20C819DC00202129 /* Info.plist */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		EF68A9D820C819DC00202129 /* Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF68A9F020C823CB00202129 /* HomePage.swift */,
+				EF68A9D920C819DC00202129 /* InterfaceController.swift */,
+				EF68A9DB20C819DC00202129 /* ExtensionDelegate.swift */,
+				EF68A9DD20C819DC00202129 /* NotificationController.swift */,
+				EF68A9DF20C819DD00202129 /* Assets.xcassets */,
+				EF68A9E120C819DD00202129 /* Info.plist */,
+				EF68A9E220C819DD00202129 /* PushNotificationPayload.apns */,
+			);
+			path = "Watch Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +176,51 @@
 				EF68A9AD20C8195500202129 /* Sources */,
 				EF68A9AE20C8195500202129 /* Frameworks */,
 				EF68A9AF20C8195500202129 /* Resources */,
+				EF68A9ED20C819DD00202129 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF68A9E420C819DD00202129 /* PBXTargetDependency */,
 			);
 			name = Haptic;
 			productName = Haptic;
 			productReference = EF68A9B120C8195500202129 /* Haptic.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EF68A9C720C819D900202129 /* Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF68A9EA20C819DD00202129 /* Build configuration list for PBXNativeTarget "Watch" */;
+			buildPhases = (
+				EF68A9C620C819D900202129 /* Resources */,
+				EF68A9E920C819DD00202129 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF68A9D720C819DC00202129 /* PBXTargetDependency */,
+			);
+			name = Watch;
+			productName = Watch;
+			productReference = EF68A9C820C819D900202129 /* Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EF68A9D320C819DC00202129 /* Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF68A9E620C819DD00202129 /* Build configuration list for PBXNativeTarget "Watch Extension" */;
+			buildPhases = (
+				EF68A9D020C819DC00202129 /* Sources */,
+				EF68A9D120C819DC00202129 /* Frameworks */,
+				EF68A9D220C819DC00202129 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Extension";
+			productName = "Watch Extension";
+			productReference = EF68A9D420C819DC00202129 /* Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +233,12 @@
 				ORGANIZATIONNAME = "Todd Laney";
 				TargetAttributes = {
 					EF68A9B020C8195500202129 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					EF68A9C720C819D900202129 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					EF68A9D320C819DC00202129 = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
@@ -113,6 +257,8 @@
 			projectRoot = "";
 			targets = (
 				EF68A9B020C8195500202129 /* Haptic */,
+				EF68A9C720C819D900202129 /* Watch */,
+				EF68A9D320C819DC00202129 /* Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +274,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF68A9C620C819D900202129 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF68A9CE20C819DC00202129 /* Assets.xcassets in Resources */,
+				EF68A9CC20C819D900202129 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF68A9D220C819DC00202129 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF68A9E020C819DD00202129 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,10 +300,36 @@
 			files = (
 				EF68A9B720C8195500202129 /* ViewController.swift in Sources */,
 				EF68A9B520C8195500202129 /* AppDelegate.swift in Sources */,
+				EF36AF3520C871470014848E /* WatchSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF68A9D020C819DC00202129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF68A9DE20C819DC00202129 /* NotificationController.swift in Sources */,
+				EF36AF3620C871470014848E /* WatchSession.swift in Sources */,
+				EF68A9DC20C819DC00202129 /* ExtensionDelegate.swift in Sources */,
+				EF68A9DA20C819DC00202129 /* InterfaceController.swift in Sources */,
+				EF68A9F120C823CB00202129 /* HomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF68A9D720C819DC00202129 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF68A9D320C819DC00202129 /* Watch Extension */;
+			targetProxy = EF68A9D620C819DC00202129 /* PBXContainerItemProxy */;
+		};
+		EF68A9E420C819DD00202129 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF68A9C720C819D900202129 /* Watch */;
+			targetProxy = EF68A9E320C819DD00202129 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EF68A9B820C8195500202129 /* Main.storyboard */ = {
@@ -157,6 +346,14 @@
 				EF68A9BE20C8195900202129 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF68A9CA20C819D900202129 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF68A9CB20C819D900202129 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -312,6 +509,88 @@
 			};
 			name = Release;
 		};
+		EF68A9E720C819DD00202129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RUN83V8CA;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddla.Haptic.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		EF68A9E820C819DD00202129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RUN83V8CA;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddla.Haptic.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		EF68A9EB20C819DD00202129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RUN83V8CA;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddla.Haptic.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		EF68A9EC20C819DD00202129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RUN83V8CA;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toddla.Haptic.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +608,24 @@
 			buildConfigurations = (
 				EF68A9C420C8195900202129 /* Debug */,
 				EF68A9C520C8195900202129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF68A9E620C819DD00202129 /* Build configuration list for PBXNativeTarget "Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF68A9E720C819DD00202129 /* Debug */,
+				EF68A9E820C819DD00202129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF68A9EA20C819DD00202129 /* Build configuration list for PBXNativeTarget "Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF68A9EB20C819DD00202129 /* Debug */,
+				EF68A9EC20C819DD00202129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
