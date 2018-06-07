@@ -69,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		EF36AF3420C871470014848E /* WatchSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSession.swift; sourceTree = "<group>"; };
+		EF3C751B20C98A8500E84C06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		EF68A9B120C8195500202129 /* Haptic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haptic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF68A9B420C8195500202129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF68A9B620C8195500202129 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		EF68A9B320C8195500202129 /* Haptic */ = {
 			isa = PBXGroup;
 			children = (
+				EF3C751B20C98A8500E84C06 /* README.md */,
 				EF68A9B420C8195500202129 /* AppDelegate.swift */,
 				EF68A9B620C8195500202129 /* ViewController.swift */,
 				EF68A9B820C8195500202129 /* Main.storyboard */,
